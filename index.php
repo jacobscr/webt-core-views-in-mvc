@@ -24,8 +24,12 @@ foreach ($hotels as $hotel) {
     $result .= $hotel_card;
 }
 
-// Read the content of the HTML template
-$html_template = file_get_contents('./templates/index.html');
+// Open the HTML file
+$file = fopen('./templates/index.html', 'r');
+// Read the content of the file
+$html_template = fread($file, filesize('./templates/index.html'));
+// Close the file
+fclose($file);
 
 // Replace the placeholder with the hotel cards HTML
 $html_result = str_replace($placeholder, $result, $html_template);
