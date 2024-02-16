@@ -4,9 +4,6 @@ require 'vendor/autoload.php';
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
-// Define the placeholder
-$placeholder = '###hotel_cards###';
-
 $hotels = ['Hotel Bellagio', 'Hotel Venetian', 'Hotel Caesar Palace', 'Hotel Wynn', 'Hotel Paris'];
 
 // Twig setup
