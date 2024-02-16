@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels on the strip</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        {% for hotel in hotels %}
+        <div class='col-md-4 mt-3'>
+            <div class='card w-3'>
+                <div class='card-body'>
+                    <h5 class='card-title'>{{ hotel }}</h5>
+                    <p class='card-text'>Some description about {{ hotel }} here...</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
