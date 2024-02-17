@@ -11,4 +11,5 @@ $loader = new FilesystemLoader('./views');
 $twig = new Environment($loader);
 
 // Render the index template with the hotel cards
-echo $twig->render('index.html', ['hotels' => $hotels]);
+echo $twig->render('index.twig', ['hotels' => $hotels]);
+
