@@ -1,4 +1,6 @@
 <?php
+namespace Jacob\WebtCoreViewsInMvc;
+
 class Hotel {
     public string $name;
     public string $description;

@@ -3,32 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotels on the strip</title>
+    <title>{% block title %}Default Title{% endblock %}</title>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-<body>
+    <body>
 
-<!-- Include Main Menu -->
-{% include 'main-menu.twig' %}
+    {% include 'main-menu.twig' %}
 
-<div class="container mt-5">
-    <div class="row mt-4">
-        {% for hotel in hotels %}
-            <div class='col-md-4 mt-3'>
-                <div class='card'>
-                    <div class='card-body'>
-                        <h5 class='card-title'>{{ hotel }}</h5>
-                        <p class='card-text'>Some description about {{ hotel }} here...</p>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+    <div class="container">
+        {% block content %}
+            <!-- Standardinhalt, kann überschrieben werden -->
+        {% endblock %}
     </div>
-</div>
 
-<!-- Include Footer -->
-{% include 'footer.twig' %}
+    {% include 'footer.twig' %}
 
-</body>
+    </body>
 </html>

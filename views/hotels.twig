@@ -1,0 +1,18 @@
+{% extends 'index.twig' %}
+
+{% block title %}Hotels on the Strip{% endblock %}
+
+{% block content %}
+    <div class="row mt-4 mb-2">
+        {% for hotel in hotels %}
+            <div class='col-md-4 mt-3'>
+                <div class='card'>
+                    <div class='card-body'>
+                        <h5 class='card-title'>{{ hotel.name }}</h5>
+                        <p class='card-text'>{{ hotel.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

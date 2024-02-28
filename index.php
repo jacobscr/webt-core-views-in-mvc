@@ -3,13 +3,21 @@ require 'vendor/autoload.php';
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+use Jacob\WebtCoreViewsInMvc\Hotel;
 
-$hotels = ['Hotel Bellagio', 'Hotel Venetian', 'Hotel Caesar Palace', 'Hotel Wynn', 'Hotel Paris'];
+$faker = Faker\Factory::create();
+
+$hotels = [];
+
+for ($i = 0; $i < 10; $i++) {
+    $hotels[] = new Hotel($faker->company, $faker->text);
+}
+
+echo $hotels[1]->name;
 
 // Twig setup
 $loader = new FilesystemLoader('./views');
 $twig = new Environment($loader);
 
 // Render the index template with the hotel cards
-echo $twig->render('index.twig', ['hotels' => $hotels]);
-
+echo $twig->render('hotels.twig', ['hotels' => $hotels]);

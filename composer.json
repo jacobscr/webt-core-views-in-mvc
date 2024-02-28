@@ -13,6 +13,7 @@
         }
     ],
     "require": {
-        "twig/twig": "^3.8"
+        "twig/twig": "^3.8",
+        "fakerphp/faker": "^1.23"
     }
 }
