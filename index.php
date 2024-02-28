@@ -1,23 +1,11 @@
 <?php
 require 'vendor/autoload.php';
 
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-use Jacob\WebtCoreViewsInMvc\Hotel;
+$view = new \TYPO3Fluid\Fluid\View\TemplateView();
 
-$faker = Faker\Factory::create();
+$paths = $view->getTemplatePaths();
+$paths->setTemplateRootPaths(['views']);
+$paths->setPartialRootPaths(['views']);
 
-$hotels = [];
-
-for ($i = 0; $i < 10; $i++) {
-    $hotels[] = new Hotel($faker->company, $faker->text);
-}
-
-echo $hotels[1]->name;
-
-// Twig setup
-$loader = new FilesystemLoader('./views');
-$twig = new Environment($loader);
-
-// Render the index template with the hotel cards
-echo $twig->render('hotels.twig', ['hotels' => $hotels]);
+$output = $view->render('index');
+echo $output;
