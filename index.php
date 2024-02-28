@@ -15,15 +15,7 @@ $paths = $view->getTemplatePaths();
 $paths->setTemplateRootPaths(['views']);
 $paths->setPartialRootPaths(['views']);
 
+$view->assign('hotels', $hotels);
+
 $output = $view->render('index');
 echo $output;
-
-/*
-
-
-
-
-
-
-
- */

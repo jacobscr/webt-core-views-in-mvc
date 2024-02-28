@@ -1,0 +1,12 @@
+<div class="row mt-4 mb-2" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+    <f:for each="{hotels}" as="hotel">
+        <div class='col-md-4 mt-3'>
+            <div class='card'>
+                <div class='card-body'>
+                    <h5 class='card-title'>{hotel.name}</h5>
+                    <p class='card-text'>{hotel.description}</p>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>
