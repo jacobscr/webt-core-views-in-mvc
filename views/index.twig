@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
+
+<!-- Include Main Menu -->
+{% include 'main-menu.twig' %}
+
+<div class="container mt-5">
     <div class="row mt-4">
         {% for hotel in hotels %}
             <div class='col-md-4 mt-3'>
-                <div class='card w-3'>
+                <div class='card'>
                     <div class='card-body'>
                         <h5 class='card-title'>{{ hotel }}</h5>
                         <p class='card-text'>Some description about {{ hotel }} here...</p>
@@ -22,5 +26,9 @@
         {% endfor %}
     </div>
 </div>
+
+<!-- Include Footer -->
+{% include 'footer.twig' %}
+
 </body>
 </html>
