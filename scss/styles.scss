@@ -1,0 +1,17 @@
+$primary-color: #ff0015;
+$secondary-color: #6c757d;
+$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color
+);
+
+$body-bg: #f1f1f1;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  font-family: $font-family-base;
+  background-color: $body-bg;
+}

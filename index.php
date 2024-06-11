@@ -13,8 +13,6 @@ for ($i = 0; $i < 10; $i++) {
     $hotels[] = new Hotel($faker->company, $faker->text);
 }
 
-echo $hotels[1]->name;
-
 // Twig setup
 $loader = new FilesystemLoader('./views');
 $twig = new Environment($loader);
